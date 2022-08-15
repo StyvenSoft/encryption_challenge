@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Text encryptor</title>
+</head>
+<body>
+    <main class="main__wrapper">
+        <section class="main__left">
+            <header class="header__main">
+                <div class="brand">
+                    <img src="./assets/logo.svg" alt="Logo Alura">
+                </div>
+            </header>
+            <section class="main__container">
+                <textarea class="text__enter" name="text" id="" cols="30" rows="10" placeholder="Enter the text here.."></textarea>
+                <div class="wrapper_actions">
+                    <p class="info">Only lowercase letters and no accents</p>
+                    <div class="footer_buttons">
+                        <button class="btn" onclick="encrypt()" id="btn_encrypt">Encrypt</button>
+                        <button class="btn" onclick="decrypt()" id="btn_decrypt">Decrypt</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="main__right">
+            <img src="./assets/dummy.svg" alt="Decrypt dummy">
+            <div class="card__message">
+                <h2>No message was found!</h2>
+                <p class="message">Enter the text you want to encrypt or decrypt</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__info">
+            <a href="https://github.com/StyvenSoft">Styvensoft</a>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>

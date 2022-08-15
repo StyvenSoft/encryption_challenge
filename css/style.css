@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
+}
+
+:root {
+    --font-color: hsl(223deg 19% 59%);
+    --color-white: #fff;
+}
+
+body {
+    background-color: var(--font-color);
+}
+
+.main__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+header.header__main {
+    margin: 15px 0;
+}
+
+.brand {
+    margin-left: -2rem;
+}
+
+.text__enter {
+    border: none;
+    outline: none;
+    resize: none;
+    height: 400px;
+    width: 100%;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+button.btn {
+    text-align: center;
+    padding: 1rem 2rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.message {
+    padding: 1rem 0;
+}
+
+.card__message {
+    background-color: var(--color-white);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.footer__info {
+    text-align: center;
+    margin: 3rem 0;
+}
