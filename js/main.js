@@ -7,15 +7,28 @@ const output = document.querySelector('.message');
 const vowels = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
 let stateEncry = false, stateDecry = false;
 
+const funcLowerCase = (e) => {
+    e.value = e.value.toLowerCase();
+}
+
+const validate = (validatedMessage) => {
+    if (/^[a-zA-ZñÑ ]+$/g.test(validatedMessage)) { 
+        changeMessage(validatedMessage);
+    } else{
+        alert("Letters with accents or special characters should not be used."); 
+    }
+}
+
 const encrypt = () => {
     stateEncry = true;
-    changeMessage(messageText.value);
+    validate(messageText.value)
 }
 
 const decrypt = () => {
     stateDecry = true;
-    changeMessage(messageText.value);
+    validate(messageText.value);
 }
+
 const copy = () => {
     navigator.clipboard.writeText(output.textContent);
     alert('Copied text!')

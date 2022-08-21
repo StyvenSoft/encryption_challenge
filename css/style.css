@@ -8,6 +8,8 @@
 :root {
     --font-color: hsl(223deg 19% 59%);
     --color-white: #fff;
+    --color-blue: #0a3871;
+    --box-shadow: 0px 26px 34px -6px rgb(0 0 0 / 28%);
 }
 
 body {
@@ -32,10 +34,11 @@ header.header__main {
     border: none;
     outline: none;
     resize: none;
-    height: 400px;
     width: 100%;
     font-size: 2rem;
     padding: 10px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
 }
 
 button.btn, .btn-copy {
@@ -46,12 +49,30 @@ button.btn, .btn-copy {
     border-radius: 10px;
 }
 
+.footer_buttons > *:first-child {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+p.info {
+    margin: 1rem 0;
+}
+
+.info::before {
+    content: '';
+    display: inline-flex;
+    margin-right: 0.5rem;
+    width: 1rem;
+    aspect-ratio: 1 / 1;
+    background-image: url(../assets/info.svg)
+}
+
 button.btn-copy {
     display: none;
 }
 
 .message {
-    padding: 1rem 0;
+    padding: 1rem 0;    
     font-size: 2rem;
 }
 
@@ -61,9 +82,33 @@ button.btn-copy {
     padding: 1.5rem;
     text-align: center;
     margin: 1rem 0;
+    box-shadow: var(--box-shadow);
 }
 
 .footer__info {
     text-align: center;
     margin: 3rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .main__wrapper {
+        flex-direction: row;
+    }
+    section.main__right, section.main__left {
+        text-align: center;
+        width: 100%;
+        margin: 30px;
+    } 
+    .footer_buttons {
+        display: flex;
+    }
+    button.btn {
+        margin: 15px;
+    }
+    .brand {
+        margin-left: 0;
+    }
+    .message {
+        font-size: 16px;
+    }
 }

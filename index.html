@@ -8,15 +8,15 @@
     <title>Text encryptor</title>
 </head>
 <body>
+    <header class="header__main">
+        <div class="brand">
+            <img src="./assets/logo.svg" alt="Logo Alura">
+        </div>
+    </header>
     <main class="main__wrapper">
         <section class="main__left">
-            <header class="header__main">
-                <div class="brand">
-                    <img src="./assets/logo.svg" alt="Logo Alura">
-                </div>
-            </header>
             <section class="main__container">
-                <textarea class="text__enter" name="text" id="" cols="30" rows="10" placeholder="Enter the text here.."></textarea>
+                <textarea class="text__enter" name="text" onkeyup="funcLowerCase(this);" cols="30" rows="8" placeholder="Enter the text here.."></textarea>
                 <div class="wrapper_actions">
                     <p class="info">Only lowercase letters and no accents</p>
                     <div class="footer_buttons">
